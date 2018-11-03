@@ -1,5 +1,5 @@
 $(updateVeiw)
 
 function updateVeiw(){
-    alert("FALLOW FOR FREE I-PHONE!!!")
+    alert("CLICK 'OK' FOR FREE I-PHONE!!!")
 }
