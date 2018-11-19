@@ -3,10 +3,11 @@ $(updateVeiw)
 const Base_URL = "https://zagster-service.herokuapp.com"
 
 function updateVeiw(){
-    $.getJSON(Base_URL + "/rides/count" , updateRideCount)
+    $.getJSON(Base_URL + "/rides/locations_and_times", RidePerYear)
 }
 
-function updateRideCount(data) {
-    numberOfRides = data.count
-    $("h2#rideCount").html(numberOfRides)
+function RidePerYear(Data){
+    console.log(Data)
 }
+
+   

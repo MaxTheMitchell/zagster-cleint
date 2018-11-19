@@ -8,15 +8,79 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src = "main.js"></script>
-    
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" 
+    integrity="sha256-o8aByMEvaNTcBsw94EfRLbBrJBI+c3mjna/j4LrfyJ8=" 
+    crossorigin="anonymous"></script>
+
 </head>
 <body>
 
    <h1>How fast are Zagsters going depending on the length of the trip?</h1>
 
    <h2>The average velocity of a Zagster ride depending on the time the duration of the ride.</h2>
-   <img src="http://python-graph-gallery.com/wp-content/uploads/130_Basic_Matplotlib_Scatterplot.png" height="420" width="420">
+   <canvas id="scatterChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById("scatterChart").getContext('2d');
+var scatterChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+                
+            }]
+        }
+    }
+});
+</script>
    <h2>The average velocity of a Zagster ride depending on the distance the Zagster travels during the ride. </h2>
-   <img src="http://python-graph-gallery.com/wp-content/uploads/130_Basic_Matplotlib_Scatterplot.png" height="420" width="420">
+   <canvas id="scatterChart2" width="400" height="400"></canvas>
+   <script>
+   var ctx = document.getElementById("scatterChart2").getContext('2d');
+   var scatterChart2 = new Chart(ctx, {
+       type: 'scatter',
+       data: {
+           datasets: [{
+               label: 'Scatter Dataset',
+               data: [{
+                   x: -10,
+                   y: 0
+               }, {
+                   x: 0,
+                   y: 10
+               }, {
+                   x: 10,
+                   y: 5
+               }]
+           }]
+       },
+       options: {
+           scales: {
+               xAxes: [{
+                   type: 'linear',
+                   position: 'bottom'
+                   
+               }]
+           }
+       }  
+   });
+   </script>
 </body>
 </html>
